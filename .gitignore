@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+/Org.WingTipToy.ProductServiceApi/bin/
+/Org.WingTipToy.ProductServiceApi/obj/
+/.vs/slnx.sqlite
+/.vs/Org.WingTipToy.ProductServiceApi/config/applicationhost.config

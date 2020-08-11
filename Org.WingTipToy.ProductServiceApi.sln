@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Org.WingTipToy.ProductServiceApi", "Org.WingTipToy.ProductServiceApi\Org.WingTipToy.ProductServiceApi.csproj", "{A7C685D0-87B6-4C55-AD35-AA587EA82844}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7C685D0-87B6-4C55-AD35-AA587EA82844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C685D0-87B6-4C55-AD35-AA587EA82844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C685D0-87B6-4C55-AD35-AA587EA82844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C685D0-87B6-4C55-AD35-AA587EA82844}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C1B4432-8231-4349-BF3D-556AD4AE0DD1}
+	EndGlobalSection
+EndGlobal

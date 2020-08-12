@@ -10,3 +10,5 @@
 /.vs/Org.WingTipToy.ProductApi/config/applicationhost.config
 */bin
 */obj
+/.vs/Org.WingTipToy.ProductApi/DesignTimeBuild/.dtbcache.v2
+/.vs/Org.WingTipToy.ProductServiceApi/DesignTimeBuild/.dtbcache.v2

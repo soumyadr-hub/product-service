@@ -8,4 +8,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Org.WingTipToy.ProductApi.DataEntity\Org.WingTipToy.ProductApi.DataEntity.csproj" />
+  </ItemGroup>
+
 </Project>

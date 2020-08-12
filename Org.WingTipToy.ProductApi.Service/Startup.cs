@@ -9,6 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
+using Org.WingTipToy.ProductApi.BusinessLogic.Extensions;
+using Org.WingTipToy.ProductApi.Service.Contexts;
 
 namespace Org.WingTipToy.ProductServiceApi
 {
@@ -25,6 +28,14 @@ namespace Org.WingTipToy.ProductServiceApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddBusinessAccessDependency();
+            Configuration.GetConnectionString("DefaultConnection");
+            services.AddTransient<IExecutionContext, ExecutionContext>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "ProductApi.Service", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +53,12 @@ namespace Org.WingTipToy.ProductServiceApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProductApi.Service");
             });
         }
     }

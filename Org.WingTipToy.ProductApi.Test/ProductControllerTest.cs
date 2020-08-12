@@ -26,6 +26,7 @@ namespace Org.WingTipToy.ProductApi.Test
             //Act
             var actualActionResult = await Controller.HealthCheck().ConfigureAwait(false);
 
+            //Assert
             actualActionResult.Should().BeOfType<OkObjectResult>();
             var actualResult = actualActionResult as OkObjectResult;
             actualResult.Value.Should().BeEquivalentTo("All Good");

@@ -26,17 +26,10 @@ namespace Org.WingTipToy.ProductApi.Test
         public async Task Success_GetCategoriesAsync_ReturnExpectedResult()
         {
             //Arrange
+            var mockCategory = new Mock<DbSet<Category>>();
             Mock.Get(MockedProductContext)
                 .Setup(c => c.Categories)
-                .Returns(GetQueryableMockDbSet<Category>(new List<Category>
-                {
-                    new Category
-                    {
-                        CategoryId = 1,
-                        CategoryName = "TestCategory",
-                        Description = "TestDescription"
-                    }
-                }));
+                .Returns(mockCategory.Object);
 
             //Act
             var dataRepository = new DataRepository(MockedProductContext);

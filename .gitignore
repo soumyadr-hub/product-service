@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+/.vs/slnx.sqlite
+/.vs/Org.WingTipToy.ProductServiceApi/config/applicationhost.config
+/.vs/Org.WingTipToy.ProductApi/v16/TestStore/0/testlog.manifest
+/.vs/Org.WingTipToy.ProductApi/v16/TestStore/0/000.testlog
+/.vs/Org.WingTipToy.ProductApi/config/applicationhost.config
+*/bin
+*/obj

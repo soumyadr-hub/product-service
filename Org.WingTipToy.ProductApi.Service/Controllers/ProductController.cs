@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
-namespace Org.WingTipToy.ProductServiceApi.Controllers
+namespace Org.WingTipToy.ProductApi.Service.Controllers
 {
     [ApiController]
     [Route("[controller]/api")]
@@ -16,9 +17,11 @@ namespace Org.WingTipToy.ProductServiceApi.Controllers
 
         [HttpGet]
         [Route("HealthCheck")]
-        public IActionResult Get()
+        [ProducesResponseType(200, Type = typeof(string))]
+        public async Task<IActionResult> HealthCheck()
         {
-            return Ok("All Good");
+            var result = await Task.Run(() => "All Good");
+            return Ok(result);
         }
     }
 }

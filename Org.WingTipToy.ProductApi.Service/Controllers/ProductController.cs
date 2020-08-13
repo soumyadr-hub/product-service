@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Org.WingTipToy.ProductApi.Service.Contexts;
 using System.Threading.Tasks;
 
 namespace Org.WingTipToy.ProductApi.Service.Controllers
 {
+    [EnableCors("MyPolicy")]
     [ApiController]
     [Route("[controller]/api")]
     public class ProductController : ControllerBase
@@ -45,6 +47,7 @@ namespace Org.WingTipToy.ProductApi.Service.Controllers
             return Ok(products);
         }
 
+        [EnableCors("MyPolicy")]
         [HttpGet]
         [Route("Products/{categoryId}")]
         public async Task<IActionResult> GetProductsAsync(int categoryId)
